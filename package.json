@@ -1,0 +1,23 @@
+{
+  "name": "demon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "download-file": "^0.1.5",
+    "embed": "0.0.1",
+    "enmap": "^5.2.4",
+    "express": "^4.17.1",
+    "gif-to-apng": "^0.1.2",
+    "jimp": "^0.10.3",
+    "number-to-words": "^1.2.4",
+    "uuid": "^7.0.3"
+  }
+}
