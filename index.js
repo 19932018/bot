@@ -4,13 +4,24 @@ const links    = require(`./links.json`);
 const jimp     = require(`jimp`)
 const config   = require(`./config.json`);
 
+
 // aviso de pronto
 bot.on(`ready`, () => {
     bot.user.setActivity(`Eu estou em ${bot.guilds.cache.size} servidores`) //status temporario
     console.log(`O bot ${bot.user.username} foi iniciado com sucesso! com ${bot.users.cache.size} usuarios, ${bot.channels.cache.size} canais e ${bot.guilds.cache.size} Servidores.`);
 	
 })
-  
+ 
+const express = require(`express`);
+const path    = require(`path`);
+const PORT    = process.env.PORT ||  5000;
+
+express()
+  .use(express.static(path.join(__dirname, `public`)))
+  .set(`views`, path.join(__dirname, `views`))
+  .set(`view engine`, `ejs`)
+  .get(`/`, (req, res) => res.render(`pages/index`))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 bot.on("guildMemberAdd", async member => {
     //inicio do contador de membros
