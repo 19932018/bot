@@ -8,14 +8,18 @@ const config   = require(`./config.json`);
 // aviso de pronto
 bot.on(`ready`, () => {
     console.log(`O bot ${bot.user.username} foi iniciado com sucesso! com ${bot.users.cache.size} usuarios, ${bot.channels.cache.size} canais e ${bot.guilds.cache.size} Servidores.`);
-    
-    let counting = 0;
-	setInterval(function() {
-		bot.user.setActivity(`Eu estou em ${bot.guilds.cache.size} servidores`, {type: `WATCHING`});
-		console.log('Contando ' + counting);
-		counting++;
-	}, 60 * 1000);
-
+    let status = [
+        {name:`Tempo fora`, type:`PLAYING`},
+        {name:`Voces`, type:`WATCHING`},
+        {name:`${bot.user.cache.size} pessoas`, type:`LISTENING`},
+        {name:`Estou em ${bot.guilds.cache.size} Servidores`, type:`STREAMING`, url:`https://www.twitch.tv/demon_crowley_93`}
+    ]
+    function setStatus(){
+        let randomStatus = status[Math.floor(Math.random()+status.length)]
+        bot.user.setActivity({game: randomStatus})
+    }
+    setStatus();
+    setInterval(() => setStatus(),5000)
 })
  
 const express = require(`express`);
