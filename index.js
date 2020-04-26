@@ -7,14 +7,15 @@ const config   = require(`./config.json`);
 
 // aviso de pronto
 bot.on(`ready`, () => {
+    console.log(`O bot ${bot.user.username} foi iniciado com sucesso! com ${bot.users.cache.size} usuarios, ${bot.channels.cache.size} canais e ${bot.guilds.cache.size} Servidores.`);
     let counting = 0;
 	setInterval(function() {
 		bot.user.cache.setActivity('Feliz 2020 ', {type: 'WATCHING'});
 		console.log('Contando ' + counting);
 		counting++;
 	}, 60 * 1000);
-     console.log(`O bot ${bot.user.username} foi iniciado com sucesso! com ${bot.users.cache.size} usuarios, ${bot.channels.cache.size} canais e ${bot.guilds.cache.size} Servidores.`);
-});
+
+})
  
 const express = require(`express`);
 const path    = require(`path`);
