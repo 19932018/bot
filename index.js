@@ -5,7 +5,7 @@ const jimp     = require(`jimp`)
 const config   = require(`./config.json`);
 
 
-// aviso de pronto
+// aviso de pronto mais status aleatorios
 bot.on(`ready`, () => {
     console.log(`O bot ${bot.user.username} foi iniciado com sucesso! com ${bot.users.cache.size} usuarios, ${bot.channels.cache.size} canais e ${bot.guilds.cache.size} Servidores.`);
     function randomStatus() {
@@ -17,7 +17,8 @@ bot.on(`ready`, () => {
         bot.user.setActivity(status[randomStatus],  {type: `LISTENING`});
     }; setInterval(randomStatus, 5000)
 })
- 
+//aviso de pronto mais status aleatorios terminou aqui
+//deixar online na heroku 
 const express = require(`express`);
 const path    = require(`path`);
 const PORT    = process.env.PORT ||  5000;
@@ -28,7 +29,7 @@ express()
   .set(`view engine`, `ejs`)
   .get(`/`, (req, res) => res.render(`pages/index`))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
+//deixar online na heroku terminou aqui
 bot.on("guildMemberAdd", async member => {
     //inicio do contador de membros
     let guild = `${
@@ -101,9 +102,51 @@ bot.on(`message`, message => {
         message.reply(" \n**State of Decay 2\n`torrent` <https://is.gd/amunub>\n`onlinefix` <https://is.gd/gadeki>**");
     }
 
-    if(message.content.startsWith(`zelda breath of the wild`)){
-        message.reply(" \n**zelda breath of the wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    if(message.content.startsWith(`state of decay 2`)){
+        message.reply(" \n**State of Decay 2\ntorrent`` <https://is.gd/amunub>\n`onlinefix` <https://is.gd/gadeki>**");
     }
+
+    if(message.content.startsWith(`State of decay 2`)){
+        message.reply(" \n**State of Decay 2\n`torrent` <https://is.gd/amunub>\n`onlinefix` <https://is.gd/gadeki>**");
+    }
+
+    if(message.content.startsWith(`State Of Decay 2`)){
+        message.reply(" \n**State of Decay 2\n`torrent` <https://is.gd/amunub>\n`onlinefix` <https://is.gd/gadeki>**");
+    }
+
+    if(message.content.startsWith(`State Of Decay`)){
+        message.reply(" \n**State of Decay 2\n`torrent` <https://is.gd/amunub>\n`onlinefix` <https://is.gd/gadeki>**");
+    }
+
+    if(message.content.startsWith(`Zelda Breath Of The Wild`)){
+        message.reply(" \n**Zelda Breath Of The Wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    }
+
+    if(message.content.startsWith(`zelda breath of the wild`)){
+        message.reply(" \n**Zelda Breath Of The Wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    }
+
+    if(message.content.startsWith(`Zelda breath of the wild`)){
+        message.reply(" \n**Zelda Breath Of The Wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    }
+
+    if(message.content.startsWith(`Zelda Breath of the Wild`)){
+        message.reply(" \n**Zelda Breath Of The Wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    }
+
+    if(message.content.startsWith(`Zelda BOTW`)){
+        message.reply(" \n**Zelda Breath Of The Wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    }
+
+    if(message.content.startsWith(`Zelda botw`)){
+        message.reply(" \n**Zelda Breath Of The Wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    }
+
+    if(message.content.startsWith(`zelda botw`)){
+        message.reply(" \n**Zelda Breath Of The Wild\n`Versão (Eur) google drive` <https://bit.ly/2UH7yex>\n`Versão (Usa) google drive` <https://bit.ly/2UFxDKV>**");
+    }
+
+
     
 
 });
