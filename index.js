@@ -10,7 +10,7 @@ bot.on(`ready`, () => {
     console.log(`O bot ${bot.user.username} foi iniciado com sucesso! com ${bot.users.cache.size} usuarios, ${bot.channels.cache.size} canais e ${bot.guilds.cache.size} Servidores.`);
 	let counting = 0;
 	setInterval(function() {
-		bot.user.cache.setActivity(`Eu estou em ${bot.guilds.cache.size} servidores`, {type: `WATCHING`});
+		bot.user.cache.setActivity(`Bom dia`, {type: `WATCHING`});
 		console.log(`Contando ` + counting);
 		counting++;
 	}, 60 * 1000);
