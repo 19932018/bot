@@ -11,7 +11,7 @@ bot.on(`ready`, () => {
     
     let counting = 0;
 	setInterval(function() {
-		bot.user.setActivity('Feliz 2020 ', {type: 'WATCHING'});
+		bot.user.setActivity(`Eu estou em ${bot.guilds.cache.size} servidores`, {type: `WATCHING`});
 		console.log('Contando ' + counting);
 		counting++;
 	}, 60 * 1000);
