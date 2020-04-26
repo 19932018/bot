@@ -78,8 +78,8 @@ bot.on("guildMemberAdd", async member => {
 })
 // mensagem de boas vindas com imagem para novos membros terminou aqui
 //mensagem que o bot entrou no servidor
-bot.on("GuildCreator", guild => {
-    console.log(`O bot entrou nos servidor: ${Guild.name.cache} (id: ${guild.id.cache}). População: ${guild.memberCount.cache} membros`);
+bot.on("guildCreator", guild => {
+    console.log(`O bot entrou nos servidor: ${guild.name.cache} (id: ${guild.id.cache}). População: ${guild.memberCount.cache} membros`);
     bot.user.setActivity(`Estou em ${bot.guilds.cache.size} servidores`);
 });
 // mensagem que o bot entrou no servidor terminou aqui 
