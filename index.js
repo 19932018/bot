@@ -93,7 +93,7 @@ bot.on(`message`, message => {
 // mensagens manuais que puxam da pasta links termina aqui
 // mensagens automaticas iniciam aqui
     if(message.content.startsWith(`state of decay`)){
-        message.reply(" \n**State of Decay 2\n`torrent` <https://is.gd/amunub>\n`onlinefix` <https://is.gd/rofala>**");
+        message.reply(" \n**State of Decay 2\n`torrent` <https://is.gd/amunub>\n`onlinefix` <https://is.gd/gadeki>**");
     }
 
     if(message.content.startsWith(`zelda breath of the wild`)){
