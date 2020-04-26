@@ -52,8 +52,7 @@ bot.on("guildMemberAdd", async member => {
     }
     let canal1 = bot.channels.cache.get("690707795326140478");
     canal1.setTopic(`Temos atualmente no servidor ${count} membros :heart_eyes: .`);
-    // final do contador de membros
-    
+    // final do contador de membros 
 //mensagem de boas vindas com imagem para novos membros
     let canal = bot.channels.cache.get("690590568060944474")
     let fonte = await jimp.loadFont(jimp.FONT_SANS_32_BLACK)
