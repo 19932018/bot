@@ -12,7 +12,7 @@ bot.on(`ready`, () => {
         let status = [`se inscreva no canal`, `convide seu amigo para o Discord`, `twitch`, `facebook`]
         let randomStatus = Math.floor(Math.random() * status.length);
         bot.user.setActivity(status[randomStatus],  {type: `STREAMING`, url: `https://www.twitch.tv/demon_crowley_93`});
-    };   setInterval(randomStatus, 3000)
+    };   setInterval(randomStatus, 1000)
 })
      //   bot.user.setActivity(status[randomStatus],  {type: `PLAYING`});
      //   bot.user.setActivity(status[randomStatus],  {type: `WATCHING`});
