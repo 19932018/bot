@@ -12,11 +12,13 @@ bot.on(`ready`, () => {
         let status = [`se inscreva no canal`, `convide seu amigo para o Discord`, `twitch`, `facebook`]
         let randomStatus = Math.floor(Math.random() * status.length);
         bot.user.setActivity(status[randomStatus],  {type: `STREAMING`, url: `https://www.twitch.tv/demon_crowley_93`});
-        bot.user.setActivity(status[randomStatus],  {type: `PLAYING`});
-        bot.user.setActivity(status[randomStatus],  {type: `WATCHING`});
-        bot.user.setActivity(status[randomStatus],  {type: `LISTENING`});
-    }; setInterval(randomStatus, 5000)
+    };   setInterval(randomStatus(),20* 1000);
 })
+     //   bot.user.setActivity(status[randomStatus],  {type: `PLAYING`});
+     //   bot.user.setActivity(status[randomStatus],  {type: `WATCHING`});
+     //   bot.user.setActivity(status[randomStatus],  {type: `LISTENING`});
+
+
 //aviso de pronto mais status aleatorios terminou aqui
 //deixar online na heroku 
 const express = require(`express`);
